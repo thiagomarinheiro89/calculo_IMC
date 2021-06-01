@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Calculadora IMC</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src='funcoes.js'></script>
+</head>
+<body>
+
+
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="panel-group">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Calculo IMC</div>
+          <div class="panel-body">
+            <form id='formulario'>
+              Nome:
+              <input type="text" name="nome" value="" placeholder="Digite seu nome" class='form-control' id='nome'>
+              Idade (Anos):
+              <input type="number" name="idade" value="" placeholder="Digite sua idade" class='form-control' id='idade'>
+              Peso (kg):
+              <input type="number" name="peso" value="" placeholder="Digite seu peso atual" class='form-control' id='peso'>
+              Altura (m):
+              <input type="number" name="altura" value="" placeholder="Digite sua altura atual" class='form-control' id='altura'>
+            </form>
+            <br>
+            <button class='btn btn-primary' onclick='calcular()'>Calcular</button>
+            <button class='btn btn-danger' onclick='limpar()'>Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='col-sm-6'>
+      <div class='alert alert-danger' id="erro" style='display:none'>
+        <b>Erro!</b>
+        <br>
+        <br>
+         por favor digite todos os dados do formulário!
+      </div>
+      <div class='alert alert-info' id='calculo' style='display:none'>
+
+      </div>
+    </div>
+    <div class='col-sm-12'>
+      <center>
+        <img src='img/0.png' id='grafico'>
+      </center>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
